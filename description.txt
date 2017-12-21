@@ -1,0 +1,3 @@
+Title: Invincible Quake-Like Player Type
+Author: SadBlobfish
+Quake-like player type that can't be killed in any way.
