@@ -9,8 +9,9 @@ exec("./Player_InvincibleQuake.cs");
 package AllowInvincibleQuakeSuicide
 {
 	function serverCmdSuicide(%client) {
-		if(%client.player.getDatablock() == PlayerInvincibleQuake.getID())
-			%client.player.setDatablock(PlayerStandardArmor);
+		if (isObject(%client.player))
+			if(%client.player.getDatablock() == PlayerInvincibleQuake.getID())
+				%client.player.setDatablock(PlayerStandardArmor);
 		Parent::ServerCmdSuicide(%client);
 	}
 };
